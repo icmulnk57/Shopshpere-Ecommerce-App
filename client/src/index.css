@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* font-family: 'Poppins', sans-serif; */
+/* font-family: 'Playfair Display', serif; */
+
+/* //navbar css */
+.navbar {
+  background: #131921 !important;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+
+  line-height: 26px;
+  text-transform: uppercase;
+  /* box-shadow: 0 8px 6px -6px gray; */
+  /* --webkit-box-shadow: 0 8px 6px -6px gray;
+  border-bottom: solid gray !important; */
+}
+
+.nav-link {
+  font-weight: 300 !important;
+  color: white;
+}
+.nav-link:hover{
+  color: white;
+}
+
+.active {
+  border-bottom: 2px solid black;
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-family: "roboto", sans-serif;
+  letter-spacing: 3px;
+  color: white !important;
+}
+
+.btn-yellow{
+  background: #febd69;
+}
+.btn-yellow:hover{
+  background-color: #f3a847;
+}
+
+.btn-yellow2{
+  background: #FF8F00;
+}
+.btn-yellow2:hover{
+  background-color: #FFA41C;
+}
+.btn-yellow3{
+  background-color: #FCD200;
+}
+.btn-yellow3:hover{
+  background-color: #FFD814;
+}
+
+
+
+.navbar-nav .nav-link.active{
+  color: white !important;
+}
+
+
+
+/* =============================
+==========footer============= */
+
+.footer {
+  color: white;
+  padding: 25px;
+  background: #131921; /* fallback for old browsers */
+  
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+.footer a:hover {
+  color: #ffefba;
+  /* border-bottom: 1px solid #ffefba; */
+}
+/* =================================
+======== page not found css ======= */
+.pnf {
+  display: flex;
+  min-height: 65vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pnf-title {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+.pnf-heading {
+  font-weight: normal;
+}
+
+.pnf-btn {
+  color: black;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 10px;
+  margin-top: 10px;
+}
+.pnf-btn:hover {
+  background-color: black;
+  color: white;
+}
+/* ========================================= */
+/* =========contact us ========= */
+.contactus {
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==================== */
+.product-link {
+  text-decoration: none !important;
+  color: black !important;
+}
