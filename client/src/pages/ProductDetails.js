@@ -72,6 +72,12 @@ const ProductDetails = () => {
             >
               ADD TO CART
             </button>
+            <button
+              className="btn btn-yellow2 ms-1"
+              onClick={() => navigate("/cart")}
+            >
+              GO TO CART
+            </button>
           </div>
         </div>
       </div>
@@ -83,7 +89,7 @@ const ProductDetails = () => {
             <p className="text-center">No Similar Products found</p>
           )}
           {relatedProducts.map((p) => (
-            <div key={p._id} className="card m-2" style={{ width: "18rem" }}>
+            <div key={p._id} className="card m-2" style={{ width: "22rem" }}>
               <img
                 src={URL+`/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top rounded product-image"

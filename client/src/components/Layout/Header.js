@@ -7,7 +7,7 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import { useState, useEffect } from 'react';
-import favicon from "./favicon.jpg"
+import favicon from "./favicon.png"
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -40,18 +40,19 @@ const Header = () => {
       <nav className={`navbar navbar-expand-lg bg-body-tertiary ${isNavbarSticky ? "fixed-top" : ""}`}>
         <div className="container-fluid ">
           <button
-            className="navbar-toggler"
+            className="navbar-toggler btn-yellow"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarTogglerDemo01"
             aria-controls="navbarTogglerDemo01"
             aria-expanded="false"
             aria-label="Toggle navigation"
+           
           >
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand">
+            <Link to="/" className="navbar-brand d-flex justify-content-center align-items-center gap-2">
               <img src={favicon}/> ShopSphere
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">

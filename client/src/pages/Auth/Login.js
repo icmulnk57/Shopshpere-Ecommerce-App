@@ -5,7 +5,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
-import favicon from "../../components/Layout/favicon.jpg";
+import favicon from "../../components/Layout/favicon.png";
 import { URL } from "../../url";
 const Login = () => {
   const [email, setEmail] = useState("");

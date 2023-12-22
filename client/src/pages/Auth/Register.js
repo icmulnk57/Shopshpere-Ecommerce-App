@@ -4,7 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
-import favicon from "../../components/Layout/favicon.jpg";
+import favicon from "../../components/Layout/favicon.png";
 import { URL } from "../../url";
 const Register = () => {
   const [name, setName] = useState("");
