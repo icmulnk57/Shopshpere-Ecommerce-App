@@ -4,6 +4,7 @@ import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
+import { URL } from "../url";
 
 const ProductDetails = () => {
   const params = useParams();
@@ -20,7 +21,7 @@ const ProductDetails = () => {
   // Get product
   const getProduct = async () => {
     try {
-      const { data } = await axios.get(
+      const { data } = await axios.get(URL+
         `/api/v1/product/get-product/${params.slug}`
       );
       setProduct(data?.product);
@@ -33,7 +34,7 @@ const ProductDetails = () => {
   // Get similar product
   const getSimilarProduct = async (pid, cid) => {
     try {
-      const { data } = await axios.get(
+      const { data } = await axios.get(URL+
         `/api/v1/product/related-product/${pid}/${cid}`
       );
       setRelatedProducts(data?.products);
@@ -54,7 +55,7 @@ const ProductDetails = () => {
         <div className="row">
           <div className="col-md-6">
             <img
-              src={`/api/v1/product/product-photo/${product._id}`}
+              src={URL+`/api/v1/product/product-photo/${product._id}`}
               className="img-fluid rounded product-image"
               alt={product.name}
             />
@@ -84,7 +85,7 @@ const ProductDetails = () => {
           {relatedProducts.map((p) => (
             <div key={p._id} className="card m-2" style={{ width: "18rem" }}>
               <img
-                src={`/api/v1/product/product-photo/${p._id}`}
+                src={URL+`/api/v1/product/product-photo/${p._id}`}
                 className="card-img-top rounded product-image"
                 alt={p.name}
               />
