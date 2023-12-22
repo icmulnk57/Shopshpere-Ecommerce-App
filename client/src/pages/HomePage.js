@@ -107,38 +107,44 @@ const HomePage = () => {
     <Layout title={"All Products - Best offers "}>
       <div className="container-fluid row mt-3">
         <div className="col-md-2">
-          <h4 className="text-center">Filter By Category</h4>
-          <div className="d-flex flex-column">
-            {categories?.map((c) => (
-              <Checkbox
-                key={c._id}
-                onChange={(e) => handleFilter(e.target.checked, c._id)}
-              >
-                {c.name}
-              </Checkbox>
-            ))}
-          </div>
-          <h4 className="text-center mt-4">Filter By Price</h4>
-          <div className="d-flex flex-column">
-            <Radio.Group onChange={(e) => setRadio(e.target.value)}>
-              {Prices?.map((p) => (
-                <div key={p._id}>
-                  <Radio value={p.array}>{p.name}</Radio>
-                </div>
-              ))}
-            </Radio.Group>
-          </div>
-          <div className="d-flex flex-column">
-            <button
-              className="btn btn-yellow2"
-              onClick={() => window.location.reload()}
-            >
-              RESET FILTERS
-            </button>
-          </div>
-        </div>
+        <div className="card filter-card">
+    <div className="card-body">
+      <h4 className="card-title text-center">Category</h4>
+      <div className="d-flex flex-column">
+        {categories?.map((c) => (
+          <Checkbox
+            key={c._id}
+            onChange={(e) => handleFilter(e.target.checked, c._id)}
+          >
+            {c.name}
+          </Checkbox>
+        ))}
+      </div>
+      <hr />
+      <h4 className="card-title text-center">Price</h4>
+      <div className="d-flex flex-column">
+        <Radio.Group onChange={(e) => setRadio(e.target.value)}>
+          {Prices?.map((p) => (
+            <div key={p._id}>
+              <Radio value={p.array}>{p.name}</Radio>
+            </div>
+          ))}
+        </Radio.Group>
+      </div>
+      <hr />
+      <div className="d-flex flex-column">
+        <button
+          className="btn btn-yellow2"
+          onClick={() => window.location.reload()}
+        >
+          RESET FILTERS
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
         <div className="col-md-10">
-          <h1 className="text-center mb-4">All Products</h1>
+          {/* <h1 className="text-center mb-4">All Products</h1> */}
           <div className="d-flex flex-wrap">
             {products?.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }} key={p._id}>

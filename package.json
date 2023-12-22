@@ -1,13 +1,13 @@
 {
   "name": "SHOPSPHERE",
   "version": "1.0.0",
-  "description": "ecommerce rest api",
+  "description": "this is techyaman ecommerce website",
   "main": "server.js",
   "type": "module",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "client": "npm start --prefix ./client"
+    "build":"npm run build"
     
   },
   "keywords": [],

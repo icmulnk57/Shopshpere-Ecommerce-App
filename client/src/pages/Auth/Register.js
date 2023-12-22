@@ -4,6 +4,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
+import favicon from "../../components/Layout/favicon.jpg";
 const Register = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -38,82 +39,166 @@ const Register = () => {
   };
 
   return (
-    <Layout title="Register - Ecommer App">
-      <div className="form-container ">
-        <form onSubmit={handleSubmit}>
-          <h4 className="title">REGISTER FORM</h4>
-          <div className="mb-3">
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Name"
-              required
-              autoFocus
-            />
+    <Layout title="Register - SHOPSPHERE">
+      <section className="vh-100" style={{ backgroundColor: "#9A616D" }}>
+        <div className="container py-5 h-100">
+          <div className="row d-flex justify-content-center align-items-center h-100">
+            <div className="col col-xl-8">
+              <div className="card" style={{ borderRadius: "1rem" }}>
+                <div className="row g-0">
+                  <div className="col-md-6 col-lg-7 d-flex align-items-center">
+                    <div className="card-body  p-lg-5 text-black">
+                      <form onSubmit={handleSubmit}>
+                        <div className="d-flex align-items-center mb-2 pb-0">
+                          {/* <i
+                          className="fas fa-cubes fa-2x me-3"
+                          style={{ color: "#ff6219" }}
+                        ></i> */}
+                          <img src={favicon} alt="logo" />
+                          <span className="h1 fw-bold mb-0">Register</span>
+                        </div>
+
+                        <h5
+                          className="fw-normal mb-3 pb-3"
+                          style={{ letterSpacing: "1px" }}
+                        >
+                          Register for an account
+                        </h5>
+                        
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="text"
+                            id="name"
+                            className="form-control form-control-sm"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputName"
+                          >
+                            Name
+                          </label>
+                        </div>
+                         
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="email"
+                            id="exampleInputEmail1"
+                            className="form-control form-control-sm"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputEmail1"
+                          >
+                            Email address
+                          </label>
+                        </div>
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="password"
+                            id="exampleInputPassword1"
+                            className="form-control form-control-sm"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputPassword1"
+                          >
+                            Password
+                          </label>
+                        </div>
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="text"
+                            id="exampleInputPhone"
+                            className="form-control form-control-sm"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputPhone"
+                          >
+                            Phone
+                          </label>
+                        </div>
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="text"
+                            id="exampleInputAddress"
+                            className="form-control form-control-sm"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputAddress"
+                          >
+                            Address
+                          </label>
+                        </div>
+
+                        <div className="form-outline mb-2">
+                          <input
+                            type="text"
+                            id="exampleInputAnswer"
+                            className="form-control form-control-sm"
+                            value={answer}
+                            onChange={(e) => setAnswer(e.target.value)}
+                            placeholder=""
+                            required
+                          />
+                          <label
+                            className="form-label"
+                            htmlFor="exampleInputAnswer"
+                          >
+                            Favorite Sports
+                          </label>
+                        </div>
+
+                        <button
+                          className="btn btn-yellow3 "
+                          type="submit"
+                        >
+                          REGISTER
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+
+                  <div className="col-md-6 col-lg-4 my-5 d-none d-md-block">
+                    <img
+                      src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                      alt="login form"
+                      className="img-fluid"
+                      style={{ borderRadius: "1rem 0 0 1rem" }}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="mb-3">
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Email "
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              id="exampleInputPassword1"
-              placeholder="Enter Your Password"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Phone"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="Enter Your Address"
-              required
-            />
-          </div>
-          <div className="mb-3">
-            <input
-              type="text"
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
-              className="form-control"
-              id="exampleInputEmail1"
-              placeholder="What is Your Favorite sports"
-              required
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
-            REGISTER
-          </button>
-        </form>
-      </div>
+        </div>
+      </section>
     </Layout>
   );
 };

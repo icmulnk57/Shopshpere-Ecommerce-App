@@ -47,6 +47,9 @@
 .btn-yellow:hover{
   background-color: #f3a847;
 }
+.bg-dark{
+  background-color: #131921 !important;
+}
 
 .btn-yellow2{
   background: #FF8F00;
@@ -67,6 +70,45 @@
   color: white !important;
 }
 
+
+
+/* =============================
+register
+=========================== */
+.form-outline {
+      position: relative;
+      margin-bottom: 15px;
+    }
+
+    .form-outline input {
+      padding: 10px;
+      padding-left: 15px;
+      border: 1px solid #ced4da;
+      border-radius: 0.25rem;
+      width: 100%;
+      font-size: 14px;
+      z-index: 1; /* Ensure the input is above the label */
+    }
+
+    .form-outline label {
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      transition: all 0.2s ease-out;
+      color: #868e96;
+      font-size: 14px;
+      pointer-events: none; /* Make label not clickable */
+    }
+
+    .form-outline input:focus + label,
+    .form-outline input:not(:placeholder-shown) + label {
+      top: -10px;
+      left: 10px;
+      font-size: 12px;
+      color: #343a40;
+      background-color: #fff;
+      padding: 0 5px;
+    }
 
 
 /* =============================
@@ -91,44 +133,78 @@
 }
 /* =================================
 ======== page not found css ======= */
-.pnf {
-  display: flex;
-  min-height: 65vh;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+/* Pagenotfound.css */
+.pnf-container {
+  text-align: center;
+  padding: 2rem;
+  margin: auto;
+  max-width: 400px;
 }
 
 .pnf-title {
-  font-size: 100px;
-  font-weight: 700;
+  font-size: 5rem;
+  color: #f44336; /* Red color for emphasis */
 }
 
 .pnf-heading {
-  font-weight: normal;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pnf-text {
+  color: #777;
+  margin-bottom: 1.5rem;
 }
 
 .pnf-btn {
-  color: black;
-  border: 1px solid black;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  text-align: center;
   text-decoration: none;
-  padding: 10px;
-  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #4caf50; /* Green color for the button */
+  color: #fff;
+  transition: background-color 0.3s ease;
 }
+
 .pnf-btn:hover {
-  background-color: black;
-  color: white;
+  background-color: #45a049; /* Darker green on hover */
 }
+
 /* ========================================= */
 /* =========contact us ========= */
-.contactus {
-  margin: 0;
-  padding: 0;
-  height: 70vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Contact.css */
+.contact-container {
+  padding: 40px;
 }
+
+.contact-image {
+  text-align: center;
+}
+
+.contact-details {
+  padding: 20px;
+}
+
+.contact-info {
+  font-size: 1.2rem;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
 
 /* ==================== */
 .product-link {

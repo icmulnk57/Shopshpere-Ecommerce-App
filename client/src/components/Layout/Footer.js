@@ -6,6 +6,7 @@ import {
   FaInstagram,
   FaEnvelope,
   FaPhone,
+  FaGlobe,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -67,6 +68,11 @@ const Footer = () => {
               </li>
               <li>
                 <FaPhone /> +1 (555) 123-4567
+              </li>
+              <li>
+                <a href="https://techyaman.netlify.app/" target="_blank" rel="noopener noreferrer">
+                  <FaGlobe /> techyaman.netlify.app
+                </a>
               </li>
             </ul>
           </div>

@@ -7,6 +7,7 @@ import useCategory from "../../hooks/useCategory";
 import { useCart } from "../../context/cart";
 import { Badge } from "antd";
 import { useState, useEffect } from 'react';
+import favicon from "./favicon.jpg"
 
 const Header = () => {
   const [auth, setAuth] = useAuth();
@@ -51,7 +52,7 @@ const Header = () => {
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             <Link to="/" className="navbar-brand">
-              🛒 ShopSphere
+              <img src={favicon}/> ShopSphere
             </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
               <SearchInput />

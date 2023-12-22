@@ -1,28 +1,42 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# ShopSphere eCommerce App
 
-In the project directory, you can run:
+ShopSphere is a full-stack eCommerce application that allows users to browse and purchase products online. This README provides instructions on how to set up and run both the frontend and backend components of the application.
 
-### `npm start`
+## Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- [Prerequisites](#prerequisites)
+- [Frontend Setup](#frontend-setup)
+- [Backend Setup](#backend-setup)
+- [Running the Application](#running-the-application)
+- [Contributing](#contributing)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Prerequisites
 
-### `npm test`
+Before running the application, ensure you have the following installed:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js: [Download Node.js](https://nodejs.org/)
+- npm (Node Package Manager): Installed with Node.js
+- Git: [Download Git](https://git-scm.com/)
 
-### `npm run build`
+## Frontend Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   ```bash
+   git clone https://github.com/icmulnk57/Shopshpere-Ecommerce-App.git
+   cd Shopshpere-Ecommerce-App/client
+   npm install
+   npm start
+   The application will be accessible at http://localhost:3000.
+
+
+ ## backend Setup
+  cd Shopshpere-Ecommerce-App
+  npm install
+  npm start
+  The server will run on http://localhost:8080.
+
+
+

@@ -47,14 +47,14 @@ const CategoryProduct = () => {
                     <p className="card-text">
                       {p.description.substring(0, 30)}...
                     </p>
-                    <p className="card-text"> $ {p.price}</p>
+                    <p className="card-text"> ₹ {p.price}</p>
                     <button
-                      className="btn btn-primary ms-1"
+                      className="btn btn-yellow2 ms-1"
                       onClick={() => navigate(`/product/${p.slug}`)}
                     >
                       More Details
                     </button>
-                    <button className="btn btn-secondary ms-1">
+                    <button className="btn btn-yellow3 ms-1">
                       ADD TO CART
                     </button>
                   </div>

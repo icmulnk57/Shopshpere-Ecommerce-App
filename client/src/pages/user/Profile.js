@@ -113,7 +113,7 @@ const Profile = () => {
                   />
                 </div>
 
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-yellow2">
                   UPDATE
                 </button>
               </form>
