@@ -1,0 +1,1 @@
+export const URL="https://shopshpere-ecommerce-app.vercel.app"
