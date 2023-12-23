@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import { useAuth } from "../../context/auth";
 import favicon from "../../components/Layout/favicon.png";
-import { URL } from "../../url";
+import { BASE_URL } from "../../url";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post(URL+"/api/v1/auth/login", {
+      const res = await axios.post(BASE_URL+"/api/v1/auth/login", {
         email,
         password,
       });

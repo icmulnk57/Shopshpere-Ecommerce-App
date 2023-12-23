@@ -3,7 +3,7 @@ import Layout from "./../components/Layout/Layout";
 import { useCart } from "../context/cart";
 import { useAuth } from "../context/auth";
 import { useNavigate } from "react-router-dom";
-import { URL } from "../url";
+import { BASE_URL } from "../url";
 
 const CartPage = () => {
   const [auth, setAuth] = useAuth();
@@ -59,7 +59,7 @@ const CartPage = () => {
                 <div className="row g-0">
                   <div className="col-md-4">
                     <img
-                      src={URL+`/api/v1/product/product-photo/${p._id}`}
+                      src={BASE_URL+`/api/v1/product/product-photo/${p._id}`}
                       className="img-fluid rounded-start"
                       alt={p.name}
                     />

@@ -6,7 +6,7 @@ import { Checkbox, Radio } from "antd";
 import { Prices } from "../components/Prices";
 import { useCart } from "../context/cart";
 import toast from "react-hot-toast";
-import { URL } from "../url";
+import { BASE_URL } from "../url";
 const HomePage = () => {
   const navigate = useNavigate();
   const [cart, setCart] = useCart();
@@ -21,7 +21,7 @@ const HomePage = () => {
   //get all cat
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get(URL + "/api/v1/category/get-category");
+      const { data } = await axios.get(BASE_URL + "/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -39,7 +39,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        URL + `/api/v1/product/product-list/${page}`
+        BASE_URL + `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts(data.products);
@@ -52,7 +52,7 @@ const HomePage = () => {
   //getTOtal COunt
   const getTotal = async () => {
     try {
-      const { data } = await axios.get(URL + "/api/v1/product/product-count");
+      const { data } = await axios.get(BASE_URL + "/api/v1/product/product-count");
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -68,7 +68,7 @@ const HomePage = () => {
     try {
       setLoading(true);
       const { data } = await axios.get(
-        URL + `/api/v1/product/product-list/${page}`
+        BASE_URL + `/api/v1/product/product-list/${page}`
       );
       setLoading(false);
       setProducts([...products, ...data?.products]);
@@ -100,7 +100,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       const { data } = await axios.post(
-        URL + "/api/v1/product/product-filters",
+        BASE_URL + "/api/v1/product/product-filters",
         {
           checked,
           radio,
@@ -158,7 +158,7 @@ const HomePage = () => {
             {products?.map((p) => (
               <div className="card m-2" style={{ width: "22rem" }} key={p._id}>
                 <img
-                  src={URL + `/api/v1/product/product-photo/${p._id}`}
+                  src={BASE_URL + `/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top img-fluid"
                   alt={p.name}
                   style={{ height: "200px", objectFit: "cover" }}

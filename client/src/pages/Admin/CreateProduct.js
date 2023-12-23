@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate } from "react-router-dom";
-import { URL } from "../../url";
+import { BASE_URL } from "../../url";
 const { Option } = Select;
 
 const CreateProduct = () => {
@@ -22,7 +22,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get(URL+"/api/v1/category/get-category");
+      const { data } = await axios.get(BASE_URL+"/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -48,7 +48,7 @@ const CreateProduct = () => {
       productData.append("photo", photo);
       productData.append("category", category);
       const { data } = axios.post(
-        URL+"/api/v1/product/create-product",
+        BASE_URL+"/api/v1/product/create-product",
         productData
       );
       if (data?.success) {
@@ -105,7 +105,7 @@ const CreateProduct = () => {
                 {photo && (
                   <div className="text-center">
                     <img
-                      src={URL.createObjectURL(photo)}
+                      src={BASE_URL.createObjectBASE_URL(photo)}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"

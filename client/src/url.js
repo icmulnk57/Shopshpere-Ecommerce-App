@@ -1,1 +1,1 @@
-export const URL="https://shopshpere-ecommerce-app.vercel.app"
+export const BASE_URL="https://shopshpere-ecommerce-app.vercel.app"

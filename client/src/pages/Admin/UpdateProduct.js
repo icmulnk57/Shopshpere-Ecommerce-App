@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 import axios from "axios";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
-import { URL } from "../../url";
+import { BASE_URL } from "../../url";
 const { Option } = Select;
 
 const UpdateProduct = () => {
@@ -24,7 +24,7 @@ const UpdateProduct = () => {
   //get single product
   const getSingleProduct = async () => {
     try {
-      const { data } = await axios.get(URL+
+      const { data } = await axios.get(BASE_URL+
         `/api/v1/product/get-product/${params.slug}`
       );
       setName(data.product.name);
@@ -46,7 +46,7 @@ const UpdateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get(URL+"/api/v1/category/get-category");
+      const { data } = await axios.get(BASE_URL+"/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -71,7 +71,7 @@ const UpdateProduct = () => {
       productData.append("quantity", quantity);
       photo && productData.append("photo", photo);
       productData.append("category", category);
-      const { data } = axios.put(URL+
+      const { data } = axios.put(BASE_URL+
         `/api/v1/product/update-product/${id}`,
         productData
       );
@@ -92,7 +92,7 @@ const UpdateProduct = () => {
     try {
       let answer = window.prompt("Are You Sure want to delete this product ? ");
       if (!answer) return;
-      const { data } = await axios.delete(URL+
+      const { data } = await axios.delete(BASE_URL+
         `/api/v1/product/delete-product/${id}`
       );
       toast.success("Product Deleted Successfully");
@@ -145,7 +145,7 @@ const UpdateProduct = () => {
                 {photo ? (
                   <div className="text-center">
                     <img
-                      src={URL.createObjectURL(photo)}
+                      src={BASE_URL.createObjectBASE_URL(photo)}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"
@@ -154,7 +154,7 @@ const UpdateProduct = () => {
                 ) : (
                   <div className="text-center">
                     <img
-                      src={URL+`/api/v1/product/product-photo/${id}`}
+                      src={BASE_URL+`/api/v1/product/product-photo/${id}`}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"
