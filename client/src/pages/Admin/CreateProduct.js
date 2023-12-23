@@ -105,7 +105,7 @@ const CreateProduct = () => {
                 {photo && (
                   <div className="text-center">
                     <img
-                      src={BASE_URL.createObjectBASE_URL(photo)}
+                      src={URL.createObjectURL(photo)}
                       alt="product_photo"
                       height={"200px"}
                       className="img img-responsive"
